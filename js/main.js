@@ -7,6 +7,31 @@ const CONFIG = {
 
 // Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
+    const loadingOverlay = document.querySelector('.loading-overlay');
+    const loadingBar = document.querySelector('.loading-bar');
+    
+    // Create percentage element
+    const percentageElement = document.createElement('div');
+    percentageElement.style.color = 'var(--color-accent)';
+    percentageElement.style.fontFamily = 'var(--font-mono)';
+    percentageElement.style.fontSize = 'var(--font-size-xl)';
+    percentageElement.style.marginTop = '1rem';
+    percentageElement.textContent = '0%';
+    loadingBar.insertAdjacentElement('afterend', percentageElement);
+    
+    // Animate percentage
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress++;
+        percentageElement.textContent = `${progress}%`;
+        if (progress >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                loadingOverlay.classList.add('hide');
+            }, 100);
+        }
+    }, 10);
+    
     initializeNavigation();
     initializeExperienceTabs();
     initializeScrollEffects();
