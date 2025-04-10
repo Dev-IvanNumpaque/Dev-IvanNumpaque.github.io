@@ -33,7 +33,7 @@ Portfolio personal desarrollado con Astro y React, diseñado para mostrar mis pr
 
 1. **Clona el repositorio**
    ```sh
-   git clone https://github.com/tu-usuario/portfolio.git
+   git clone https://github.com/Dev-IvanNumpaque/Dev-IvanNumpaque.github.io
    ```
 
 2. **Instala las dependencias**
@@ -48,12 +48,22 @@ Portfolio personal desarrollado con Astro y React, diseñado para mostrar mis pr
 
 ## 📫 Contacto
 
-Ivan Numpaque - [@tu_twitter](https://twitter.com/tu_usuario) - ivan.numpaque@outlook.com
+Ivan Numpaque - [@devivannumpaque](https://linkedin.com/in/devivannumpaque) - ivan.numpaque@outlook.com
 
-Link del Proyecto: [https://github.com/tu-usuario/portfolio](https://github.com/tu-usuario/portfolio)
+Link del Proyecto: [https://github.com/Dev-IvanNumpaque/Dev-IvanNumpaque.github.io](https://github.com/Dev-IvanNumpaque/Dev-IvanNumpaque.github.io)
 
 ## 🙏 Agradecimientos
 
 - [Astro](https://astro.build/)
 - [React](https://reactjs.org/)
 - [Bootstrap](https://getbootstrap.com/)
+
+## 🎉 Créditos y Agradecimientos 🚀
+
+Este proyecto ha sido fuertemente inspirado por el asombroso portafolio de Brittany Chiang (v4) 🤩, el cual pueden explorar en [https://github.com/bchiang7/v4](https://github.com/bchiang7/v4) 💻.
+
+Quiero extender mi más sincero 🙏 agradecimiento a Brittany por compartir su talento y crear un diseño que no solo es visualmente atractivo ✨ y funcional ⚙️, sino que también es de código abierto 🔓. Su trabajo ha sido una **gran** fuente de inspiración💡 y ha sentado las bases 🏗️ para la estructura y el estilo de este proyecto.
+
+Les animo encarecidamente a visitar su repositorio ➡️ para descubrir la genialidad de su trabajo. ¡No se arrepentirán! 😉
+
+---
