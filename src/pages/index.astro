@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import { personalInfo, experience, projects, contact, socialLinks } from '../data';
+---
+
+<Layout title="Ivan Numpaque - Desarrollador de Software | Portfolio" description={personalInfo.description}>
+  <Hero personalInfo={personalInfo} />
+  <About personalInfo={personalInfo} />
+  <Experience experience={experience} />
+  <Projects projects={projects} />
+  <Contact contact={contact} />
+  <Footer socialLinks={socialLinks} />
+</Layout>

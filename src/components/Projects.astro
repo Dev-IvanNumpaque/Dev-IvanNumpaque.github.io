@@ -1,0 +1,274 @@
+---
+import data from '../data/data.json';
+const { featured } = data.projects;
+---
+
+<section id="projects" class="section-common">
+  <h2 class="numbered-heading">📂 ¡Mi colección de proyectos!</h2>
+  
+  <div class="projects-grid">
+    {featured.map((project, index) => (
+      <div class={`project-item ${index % 2 === 1 ? 'project-reverse' : ''}`}>
+        <div class="project-content">
+          <div class="project-label">Proyectos Destacados ✨</div>
+          <h3 class="project-title">
+            <a href={project.links.live} target="_blank" rel="noopener noreferrer">{project.title}</a>
+          </h3>
+          <div class="project-description">
+            <p>{project.longDescription}</p>
+            <div class="project-meta">
+              <span class="project-category">{project.category}</span>
+              <span class="project-status">{project.status}</span>
+            </div>
+          </div>
+          <div class="project-features">
+            <h4>Características Principales:</h4>
+            <ul>
+              {project.features.map((feature) => (
+                <li>{feature}</li>
+              ))}
+            </ul>
+          </div>
+          <ul class="project-tech-list">
+            {project.technologies.map((tech) => (
+              <li>{tech}</li>
+            ))}
+          </ul>
+          <div class="project-links">
+            <a href={project.links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub Link">
+              <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href={project.links.live} target="_blank" rel="noopener noreferrer" aria-label="External Link">
+              <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>        <div class="project-image">
+          <img src={project.images.thumbnail} alt={`${project.title} screenshot`} />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects-grid {
+    display: grid;
+    gap: 100px;
+    margin-top: 50px;
+  }
+
+  .project-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+
+  .project-content {
+    position: relative;
+    grid-area: 1 / 1 / -1 / 7;
+    grid-column: 1 / 7;
+    z-index: 2;
+  }
+
+  .project-reverse .project-content {
+    grid-column: 7 / -1;
+    text-align: right;
+  }
+
+  .project-reverse .project-features li {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+
+  .project-reverse .project-features li::before {
+    left: unset;
+    right: 0;
+  }
+
+  .project-reverse .project-tech-list {
+    justify-content: flex-end;
+  }
+
+  .project-reverse .project-links {
+    justify-content: flex-end;
+  }
+  grid-column: 6 / -1;
+  }
+
+  .project-label {
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    margin-bottom: 10px;
+  }
+
+  .project-title {
+    color: var(--color-lightest);
+    font-size: clamp(24px, 5vw, 28px);
+    margin: 0 0 20px;
+  }
+
+  .project-title a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .project-description {
+    background-color: var(--color-bg-light);
+    padding: 25px;
+    border-radius: 4px;
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .project-category,
+  .project-status {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    background-color: var(--color-bg);
+  }
+
+  .project-features {
+    margin-top: 20px;
+  }
+
+  .project-features h4 {
+    color: var(--color-lightest);
+    font-size: var(--font-size-md);
+    margin-bottom: 10px;
+  }
+
+  .project-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .project-features li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+  }
+
+  .project-features li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 25px 0 10px;
+    list-style: none;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+  }
+
+  .project-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .project-links a {
+    color: var(--color-text);
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  .project-links svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .project-image {
+    position: relative;
+    grid-area: 1 / 6 / -1 / -1;
+    z-index: 1;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1) brightness(90%);
+    transition: var(--transition);
+  }
+
+  .project-image:hover img {
+    filter: none;
+    mix-blend-mode: normal;
+  }
+
+  .project-image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0px;
+    z-index: 3;
+    transition: var(--transition);
+    background-color: var(--color-accent);
+    mix-blend-mode: screen;
+  }
+
+  .project-image:hover::before {
+    background: transparent;
+    filter: none;
+  }
+
+  .project-reverse .project-image {
+    grid-column: 1 / 8;
+  }
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .project-reverse .project-image {
+    grid-area: 1 / 1 / -1 / 8;
+    position: relative;
+    z-index: 1;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .project-content {
+      grid-column: 1 / -1;
+      padding: 40px 40px 30px;
+      z-index: 5;
+    }
+
+    .project-image {
+      grid-column: 1 / -1;
+      opacity: 0.25;
+      height: 100%;
+    }
+  }
+</style>

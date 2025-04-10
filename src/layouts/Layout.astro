@@ -1,0 +1,204 @@
+---
+import SocialLinks from '../components/SocialLinks.astro';
+import EmailLink from '../components/EmailLink.astro';
+import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
+import LoadingOverlay from '../components/LoadingOverlay.astro';
+import '../css/buttons.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const props = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<Header {...props} />
+
+<body >
+    <LoadingOverlay />
+
+    <!-- Barras laterales -->
+    <div class="social-sidebar">
+        <SocialLinks />
+    </div>
+    <div class="email-sidebar">
+        <EmailLink />
+    </div>
+
+    <Navbar />
+
+    <main>
+        <slot />
+    </main>
+
+    <!-- Scripts globales -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<style is:global>
+    :root {
+        /* Colores */
+        --color-bg: #020c1b;
+        --color-text: #b4b7d9;
+        --color-accent: #7fffd4;
+        --color-lightest: #e6e8ff;
+        --color-navy: #252850;
+        --color-bg-light: #051834;
+        
+        /* Tipografía */
+        --font-sans: 'San Francisco','Calibre', 'Inter', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+        --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+        --font-size-xs: 13px;
+        --font-size-sm: 14px;
+        --font-size-md: 16px;
+        --font-size-lg: 18px;
+        --font-size-xl: 20px;
+        --font-size-xxl: 22px;
+        --font-size-heading: clamp(40px, 5vw, 60px);
+        
+        /* Transiciones */
+        --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+        --easing: cubic-bezier(0.645,0.045,0.355,1);
+        
+        /* Layout */
+        --nav-height: 100px;
+        --nav-scroll-height: 70px;
+        --sidebar-width: 40px;
+        --max-width: 1600px;
+        --section-padding: 100px;
+    }
+
+    @media (max-width: 768px) {
+        .social-sidebar {
+            display: none;
+        }
+
+        .navbar {
+            padding: 0 15px;
+        }
+
+        .navbar-collapse {
+            background-color: var(--color-bg);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+        }
+
+        .nav-link {
+            padding: 0.75rem 1rem;
+            text-align: center;
+        }
+    }
+
+    *, ::before, ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        display: grid;
+        grid-template-columns: var(--sidebar-width) minmax(auto, var(--max-width)) var(--sidebar-width);
+        min-height: 100vh;
+        padding: 0 50px;
+        counter-reset: section;
+        justify-content: center;
+    }
+
+    main {
+        grid-column: 2;
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 150px;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            grid-template-columns: 1fr;
+            padding: 0 25px;
+        }
+
+        .navbar {
+            padding: 10px;
+        }
+
+        .navbar-collapse {
+            background-color: var(--color-navy);
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .nav-link {
+            padding: 10px 15px;
+        }
+
+        .section-common {
+            padding: 60px 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        body {
+            padding: 0 15px;
+        }
+
+        .numbered-heading::after {
+            width: 100px;
+        }
+
+        .numbered-heading {
+            font-size: 1.5rem;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .section-common {
+        padding: 100px 0;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .numbered-heading {
+        color: var(--color-lightest);
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        margin: 10px 0 40px;
+        white-space: nowrap;
+    }
+
+    .numbered-heading::before {
+        color: var(--color-accent);
+        counter-increment: section;
+        content: "0" counter(section) ". ";
+        margin-right: 10px;
+        font-family: var(--font-mono);
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .numbered-heading::after {
+        content: "";
+        display: block;
+        width: 300px;
+        height: 1px;
+        margin-left: 20px;
+        background-color: var(--color-text);
+    }
+
+</style>

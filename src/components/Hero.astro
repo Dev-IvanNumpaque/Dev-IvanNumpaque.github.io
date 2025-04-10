@@ -1,0 +1,65 @@
+---
+import data from '../data/data.json';
+const { name, title, description, description2 } = data.personalInfo;
+---
+
+<section id="hero" class="section-common">
+  <div class="container">
+    <p class="text-accent">¡Hola!👋 Mi nombre es</p>
+    <h1>{name}</h1>
+    <h2>{title}</h2>
+    <p class="lead">
+      {description2}
+    </p>
+    <div class="hero-button">
+      <a href="#projects" class="btn btn-primary">Ver Portafolio 📂</a>
+    </div>
+  </div>
+
+  <style>
+    #hero {
+      padding: var(--section-padding) 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 25px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 8vw, 80px);
+      color: var(--color-lightest);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(40px, 8vw, 60px);
+      color: var(--color-text);
+      line-height: 0.9;
+    }
+
+    .lead {
+      margin: 20px 0 0;
+      max-width: 540px;
+      color: var(--color-text);
+      font-size: var(--font-size-lg);
+    }
+
+    .hero-button {
+      margin-top: 50px;
+    }
+
+    .text-accent {
+      color: var(--color-accent);
+      font-family: var(--font-mono);
+      font-size: var(--font-size-md);
+      margin-bottom: 20px;
+    }
+  </style>
+</section>

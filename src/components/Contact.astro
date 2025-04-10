@@ -1,0 +1,92 @@
+---
+import data from '../data/data.json';
+const { title, subtitle, description, email } = data.contact;
+const { github, linkedin, twitter } = data.socialLinks;
+---
+
+<section id="contact" class="section-common">
+  <h2 class="numbered-heading">{title}</h2>
+  <h3 class="contact-title">{subtitle}</h3>
+  <p class="contact-description">
+    {description}
+  </p>
+  <div class="contact-button">
+    <a href={`mailto:${email}`} class="btn btn-outline-accent">¡Contáctame! 🚀</a>
+  </div>
+</section>
+
+<style>
+  #contact {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+  }
+
+  .contact-title {
+    color: var(--color-lightest);
+    font-size: clamp(40px, 5vw, 60px);
+    margin: 20px 0;
+  }
+
+  .contact-description {
+    color: var(--color-text);
+    font-size: var(--font-size-lg);
+    margin-bottom: 50px;
+  }
+
+  .contact-button {
+    margin-top: 50px;
+  }
+
+  .btn {
+    color: var(--color-accent);
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--color-bg-light);
+      outline: none;
+    }
+    &:after {
+      display: none !important;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .social-links a {
+    color: var(--color-text);
+    transition: var(--transition);
+  }
+
+  .social-links a:hover {
+    color: var(--color-accent);
+    transform: translateY(-3px);
+  }
+
+  .social-links svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 768px) {
+    #contact {
+      padding: 80px 0;
+    }
+  }
+</style>

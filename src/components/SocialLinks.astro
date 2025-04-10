@@ -1,0 +1,98 @@
+---
+import data from '../data/data.json';
+const { socialLinks } = data;
+---
+
+<div class="social-links">
+    <ul>
+        <li>
+            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+        <li>
+            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+        <li>
+            <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<style>
+    :global(.social-sidebar) {
+        position: fixed;
+        bottom: 0;
+        left: 40px;
+        right: auto;
+        z-index: 10;
+        padding: 0;
+        background: none;
+    }
+
+    .social-links {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 20px;
+        background: transparent;
+    }
+
+    .social-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .social-links ul::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 90px;
+        margin: 0 auto;
+        background-color: var(--color-text);
+    }
+
+    .social-links a {
+        display: inline-block;
+        padding: 10px;
+        color: var(--color-text);
+        font-size: 20px;
+        transition: var(--transition);
+    }
+
+    .social-links a:hover {
+        color: var(--color-accent);
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+        :global(.social-sidebar) {
+            position: relative;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .social-links ul {
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-links a {
+            font-size: 24px;
+        }
+    }
+</style>

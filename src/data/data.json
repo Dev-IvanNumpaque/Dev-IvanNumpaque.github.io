@@ -1,0 +1,134 @@
+{
+  "siteMetadata": {
+    "title": "Ivan Numpaque | Desarrollador de Software",
+    "description": "Portfolio personal de Ivan Numpaque, desarrollador de software especializado en crear experiencias digitales excepcionales"
+  },
+  "personalInfo": {
+    "name": "Ivan Numpaque",
+    "title": "Full Stack Developer",
+    "email": "ivan.numpaque@outlook.com",
+    "description": "Actualmente estoy en búsqueda de nuevas oportunidades. Si tienes alguna pregunta o simplemente quieres saludar, ¡haré lo posible por responderte!",
+    "description2": "👨‍💻 Desarrollador de Software y Full Stack Apasionado ✨ con sólida experiencia en backend (☕ Java, 🐍 Python, 💾 SQL, ⚙️ Node.js) y frontend (⚛️ React, 📜 JavaScript), destacando mi competencia con 🌠 Astro para la construcción de sitios web de alto rendimiento.",
+    "location": "Bogotá, Colombia",
+    "availability": "Disponible para nuevas oportunidades",
+    "cvLink": "/ruta/a/cv.pdf",
+    "skills": {
+      "languages": ["JavaScript", "Python", "Java"],
+      "frontend": ["React", "Vue", "Astro"],
+      "backend": ["Node.js", "Express", "Django"],
+      "databases": ["MongoDB", "PostgreSQL"],
+      "tools": ["Git", "Docker", "AWS"]
+    }
+  },
+  "about":{
+      "title": "Sobre mí",
+      "description1": "Desarrollador de Software y Full Stack Apasionado: Desarrollador altamente motivado y con amplia experiencia en tecnologías backend, incluyendo Java, Python, SQL y Node.js. Posee un entendimiento integral del desarrollo frontend utilizando JavaScript, React, y es particularmente competente con el framework Astro para la construcción de sitios web de alto rendimiento.",
+      "description2": "Con una sólida formación en programación, gestión de proyectos y metodologías ágiles, me enorgullece contribuir al éxito de proyectos desafiantes. Mi enfoque se centra en la resolución de problemas, la creación de soluciones innovadoras y la mejora continua. Siempre estoy dispuesto a aprender y adaptarme a nuevas tecnologías y desafíos.",
+      "description3": "Mi objetivo es contribuir al éxito de proyectos desafiantes y crecer profesionalmente en el campo de la tecnología. Estoy dispuesto a trabajar en equipo y a enfrentar nuevos desafíos para alcanzar metas y objetivos. Si estás buscando un desarrollador apasionado y comprometido, ¡no dudes en ponerte en contacto conmigo!",
+      "description4": "Estas son algunas de las tecnologías con las que he estado trabajando recientemente:"
+    },
+
+  "experience": [
+    {
+      "company": "Freelance",
+      "position": "Full Stack Developer",
+      "startDate": "2022-01",
+      "endDate": "Presente",
+      "location": "Bogotá, Colombia",
+      "type": "Tiempo completo",
+      "responsibilities": [
+        "Desarrollo de soluciones técnicas para clientes",
+        "Colaboración con equipos multidisciplinarios"
+      ],
+      "achievements": [
+        "Aumenté la eficiencia del equipo en un 30%",
+        "Implementé CI/CD reduciendo tiempo de deployment en 50%"
+      ],
+      "technologies": ["Astro", "Node.js", "Firebase", "Git"],
+      "url": "https://company-website.com"
+    },
+    {
+      "company": "Aokiji",
+      "position": "Java developer",
+      "startDate": "2021-01",
+      "endDate": "2021-12",
+      "location": "Bogotá, Colombia",
+      "type": "Tiempo completo",
+      "responsibilities": [
+        "Desarrollo de aplicaciones web",
+        "Optimización de rendimiento"
+      ],
+      "achievements": ["Mejoré el tiempo de carga en un 40%"],
+      "technologies": ["Java", "SQL", "Git"],
+      "url": "https://aokiji.com"
+    }
+  ],
+  "projects": {
+    "categories": ["Desarrollo Web", "Aplicaciones Móviles", "Aprendizaje Automático"],
+    "featured": [
+      {
+        "title": "Pulido Logistica",
+        "description": "Logistica de paquetes, logistica de mercancías, logistica de transporte,",
+        "longDescription": "Plataforma completa para la gestión de paquetes, mercancías y transporte.",
+        "category": "Desarrollo Web",
+        "status": "Completado",
+        "date": "2023-01",
+        "technologies": ["Astro", "Node.js", "MongoDB"],
+        "features": [
+          "Autenticación de usuarios",
+          "Panel de administración",
+          "API RESTful",
+          "Chat en tiempo real",
+          "Análisis de datos"
+        ],
+        "images": {
+          "thumbnail": "/images/pulidologistica.png",
+          "screenshots": [
+            "/images/pulidologistica.png"
+          ]
+        },
+        "links": {
+          "github": "https://github.com/Dev-IvanNumpaque/PulidoLosgistica",
+          "live": "https://pulidologistica-aokijigroup.web.app/",
+          "documentation": "https://docs.project-demo.com"
+        }
+      },
+      {
+        "title": "Portfolio Minimalista",
+        "description": "Mi sitio web personal construido con Astro",
+        "longDescription": "Un sitio web moderno y minimalista que muestra mi trabajo y experiencia como desarrollador. Construido con Astro para un rendimiento óptimo y una experiencia de usuario excepcional, con aspecto minimalista simulando un cv.",
+        "category": "Desarrollo Web",
+        "status": "Completado",
+        "date": "2024-01",
+        "technologies": ["Astro", "JavaScript", "CSS"],
+        "features": [
+          "Diseño responsivo",
+          "Animaciones suaves",
+          "Optimización SEO",
+          "Alto rendimiento"
+        ],
+        "images": {
+          "thumbnail": "/images/minicv.png",
+          "screenshots": [
+            "/images/Profile.webp"
+          ]
+        },
+        "links": {
+          "github": "https://github.com/Dev-IvanNumpaque/minimalist-cv",
+          "live": "https://dev-ivannumpaque.web.app/"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "title": "¿Qué sigue?",
+    "subtitle": "Contacto",
+    "description": "Actualmente estoy en búsqueda de nuevas oportunidades. Si tienes alguna pregunta o simplemente quieres saludar, ¡haré lo posible por responderte!",
+    "email": "ivan.numpaque@outlook.com"
+  },
+  "socialLinks": {
+    "github": "https://github.com/dev-ivannumpaque",
+    "linkedin": "https://linkedin.com/in/devivannumpaque",
+    "twitter": "https://twitter.com/username"
+  }
+}

@@ -1,0 +1,95 @@
+---
+import data from '../data/data.json';
+const { name, skills } = data.personalInfo;
+const { title, description1, description3 , description4} = data.about;
+---
+
+<section id="about" class="section-common">
+  <h2 class="numbered-heading">{title}</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <p>{description1}</p>
+      <p>{description3}</p>
+      <p>{description4}</p>
+      
+      <ul class="skills-list">
+        {[...skills.frontend, ...skills.backend, ...skills.databases].map((skill) => (
+          <li>{skill}</li>
+        ))}
+      </ul>
+    </div>
+    <div class="about-pic">
+      <div class="wrapper">
+        <img src="../public/images/Profile.webp" alt="Ivan Numpaque" width="300" height="300">
+      </div>
+    </div>
+  </div>
+
+  <style>
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 50px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .about-text {
+      font-size: var(--font-size-lg);
+    }
+
+    .about-pic .wrapper {
+      position: relative;
+      max-width: 300px;
+      border-radius: 4px;
+
+      @media (max-width: 768px) {
+        margin: 0 auto;
+      }
+    }
+
+    .about-pic img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      filter: grayscale(100%) sepia(50%) hue-rotate(120deg) saturate(200%) contrast(1);
+      transition: var(--transition);
+    }
+
+    .about-pic img:hover {
+      filter: none;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+      gap: 0 10px;
+      padding: 0;
+      margin: 20px 0 0 0;
+      list-style: none;
+
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skills-list li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 30px;
+      font-family: var(--font-mono);
+      font-size: var(--font-size-sm);
+    }
+
+    .skills-list li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+    }
+  </style>
+</section>

@@ -1,23 +1,59 @@
 <div align="center">
-<img src="https://www.stickerni.tn/wp-content/uploads/2021/03/coder-logo.png" height="90px" width="auto" /> 
-<h2>
-    <em>Hola! 🖐️</em> Soy Ivan Numpaque
-</h2>
-<p>
-    Desarrollador de Software y Full Stack Apasionado: Desarrollador altamente motivado y con amplia experiencia en tecnologías backend, incluyendo Java, Python, SQL y Node.js. Posee un entendimiento integral del desarrollo frontend utilizando JavaScript, React, y es particularmente competente con el framework Astro para la construcción de sitios web de alto rendimiento. Impulsado por la pasión por la inteligencia artificial, actualmente expande su experiencia a través de cursos en línea dedicados y proyectos personales en ciencia de datos. Capacidad comprobada para entregar soluciones creativas y efectivas como freelancer. Deseoso de contribuir a equipos dinámicos que compartan una visión de innovación y crecimiento profesional continuo.
-</p>
+
+# Portfolio Personal - Ivan Numpaque
+
+[![Astro](https://img.shields.io/badge/Built%20with-Astro-0C1222?style=for-the-badge&logo=astro)](https://astro.build)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+[Ver Demo](https://tu-portfolio-url.com) · [Reportar Bug](https://github.com/tu-usuario/portfolio/issues) · [Solicitar Feature](https://github.com/tu-usuario/portfolio/issues)
+
 </div>
-<!--
-**Dev-IvanNumpaque/Dev-IvanNumpaque** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+## 🚀 Sobre el Proyecto
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Portfolio personal desarrollado con Astro y React, diseñado para mostrar mis proyectos y habilidades como desarrollador Full Stack. Construido con un enfoque en el rendimiento y la accesibilidad.
+
+### 🛠️ Construido Con
+
+- [Astro](https://astro.build/) - Framework web para sitios orientados al contenido
+- [React](https://reactjs.org/) - Biblioteca JavaScript para interfaces de usuario
+- [TypeScript](https://www.typescriptlang.org/) - Superset de JavaScript tipado
+- [Bootstrap](https://getbootstrap.com/) - Framework CSS para diseño responsive
+
+## 🔥 Características Principales
+
+- ⚡ Rendimiento optimizado con Astro
+- 📱 Diseño totalmente responsive
+- 🎨 Interfaz moderna y atractiva
+- 🌐 SEO optimizado
+- 📊 Integración con análisis de datos
+
+## 🚀 Inicio Rápido
+
+1. **Clona el repositorio**
+   ```sh
+   git clone https://github.com/tu-usuario/portfolio.git
+   ```
+
+2. **Instala las dependencias**
+   ```sh
+   npm install
+   ```
+
+3. **Inicia el servidor de desarrollo**
+   ```sh
+   npm run dev
+   ```
+
+## 📫 Contacto
+
+Ivan Numpaque - [@tu_twitter](https://twitter.com/tu_usuario) - ivan.numpaque@outlook.com
+
+Link del Proyecto: [https://github.com/tu-usuario/portfolio](https://github.com/tu-usuario/portfolio)
+
+## 🙏 Agradecimientos
+
+- [Astro](https://astro.build/)
+- [React](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)

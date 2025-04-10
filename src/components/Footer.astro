@@ -1,0 +1,75 @@
+---
+// Lógica JS del componente si es necesaria
+---
+
+<footer class="footer">
+  <div class="footer-credits">
+    <a href="https://github.com/Dev-IvanNumpaque/Dev-IvanNumpaque.github.io" target="_blank" rel="noopener noreferrer">
+      <div>Built by Ivan Numpaque</div>
+    </a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    height: auto;
+    min-height: 70px;
+  }
+
+  .social-links ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .social-links li {
+    margin: 0 10px;
+  }
+
+  .social-links a {
+    padding: 10px;
+    color: var(--color-text);
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+      transform: translateY(-3px);
+    }
+  }
+
+  .social-links svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-credits {
+    margin-top: 10px;
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    line-height: 1;
+  }
+
+  .footer-credits a {
+    text-decoration: none;
+    color: inherit;
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      height: auto;
+      padding: 15px;
+    }
+  }
+</style>

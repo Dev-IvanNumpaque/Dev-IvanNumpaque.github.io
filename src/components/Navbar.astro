@@ -1,0 +1,109 @@
+---
+---
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about"><span>01.</span>Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience"><span>02.</span>Experiencia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects"><span>03.</span>Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact"><span>04.</span>Contacto</a></li>
+                <li class="nav-item"><a class="nav-link resume-button" href="https://dev-ivannumpaque.web.app/"><span>Currículum</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .navbar {
+        height: var(--nav-height);
+        transition: var(--transition);
+        padding: 0;
+        background-color: var(--color-bg);
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar.scrolled {
+        height: var(--nav-scroll-height);
+        transform: translateY(0px);
+        background-color: var(--color-bg);
+        box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    }
+
+    .navbar.hidden {
+        transform: translateY(calc(var(--nav-scroll-height) * -1));
+    }
+
+    .nav-link {
+        display: inline-block;
+        padding: 10px;
+        font-family: var(--font-mono);
+        font-size: var(--font-size-sm);
+        color: var(--color-text);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+        position: relative;
+    }
+
+    .nav-link span {
+        color: var(--color-accent);
+        margin-right: 5px;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: var(--color-accent);
+        transition: var(--transition);
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover {
+        color: var(--color-accent);
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .resume-button {
+        color: var(--color-accent);
+        border: 1px solid var(--color-accent);
+        border-radius: 4px;
+        padding: 0.75rem 1rem;
+        margin-left: 15px;
+        font-family: var(--font-mono);
+        font-size: var(--font-size-sm);
+        background: transparent;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .resume-button:hover {
+        background-color: var(--color-bg-light);
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            padding: 0 15px;
+        }
+
+        .navbar-collapse {
+            background-color: var(--color-navy);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+        }
+    }
+    }
+</style>
