@@ -6,7 +6,7 @@
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-[Ver Demo](https://tu-portfolio-url.com) · [Reportar Bug](https://github.com/tu-usuario/portfolio/issues) · [Solicitar Feature](https://github.com/tu-usuario/portfolio/issues)
+[Ver Demo](https://dev-ivannumpaque.github.io) · [Reportar Bug](https://github.com/Dev-IvanNumpaque/Dev-IvanNumpaque.github.io/issues) · [Solicitar Feature](https://github.com/Dev-IvanNumpaque/Dev-IvanNumpaque.github.io/issues)
 
 </div>
 
@@ -45,6 +45,13 @@ Portfolio personal desarrollado con Astro y React, diseñado para mostrar mis pr
    ```sh
    npm run dev
    ```
+
+4. **Despliegue a GitHub Pages**
+   ```sh
+   npm run deploy
+   ```
+
+El sitio se desplegará automáticamente en GitHub Pages cuando se realice un push a la rama main.
 
 ## 📫 Contacto
 
