@@ -82,7 +82,7 @@
           "Análisis de datos"
         ],
         "images": {
-          "thumbnail": "/images/pulidologistica.png",
+          "thumbnail": "/public/images/pulidologistica.png",
           "screenshots": [
             "/images/pulidologistica.png"
           ]
@@ -108,7 +108,7 @@
           "Alto rendimiento"
         ],
         "images": {
-          "thumbnail": "/images/minicv.png",
+          "thumbnail": "/public/images/minicv.png",
           "screenshots": [
             "/images/Profile.webp"
           ]
